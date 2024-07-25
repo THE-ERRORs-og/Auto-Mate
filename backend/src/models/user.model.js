@@ -19,7 +19,12 @@ const userSchema = new mongoose.Schema(
       trim: true,
       maxlength: 50,
     },
-    mobile_no: {
+    gender: {
+      type: String,
+      enum: ["male", "female", "none"],
+      default: "male",
+    },
+    mobile: {
       type: String,
       maxlength: 10,
       minlength: 10,
